@@ -83,7 +83,7 @@ const FixedBottomNavigation = () => {
       <Box className="drawer--navigation">
         <Drawer
           anchor="bottom"
-          open={openHome}
+          // open={openHome}
           onClose={() => toggleHomeDrawer()}
         >
           Home
