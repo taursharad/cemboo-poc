@@ -1,0 +1,126 @@
+.trending__main--wrapper {
+  background-color: #010101;
+  .trending__wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px 0px;
+
+    position: absolute;
+    top: 550px;
+    .trending__header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 18px;
+      .header--title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #fff;
+        padding-left: 128px;
+        @media screen and (max-width: 768px) {
+          padding: 24px;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+      }
+      .header--btn {
+        text-transform: initial;
+        color: white;
+
+        font-size: 16px;
+        font-weight: 500;
+        text-transform: initial;
+      }
+    }
+    .trending__slider {
+      padding-left: 128px;
+      .slider--content {
+        position: relative;
+        min-height: 240px;
+        display: flex;
+
+        .slider--title {
+          border-radius: 4px;
+          top: 16px;
+          left: 114px;
+          position: absolute;
+          padding: 4px 10px;
+          background-color: #ebff00;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          color: black;
+        }
+
+        .image--holder {
+          .slider--bottom {
+            position: absolute;
+            bottom: 0;
+            color: green;
+            padding-left: 20px;
+            padding-bottom: 30px;
+          }
+        }
+
+        .slider--bottom {
+          .bottom--title {
+            padding: 12px 25px;
+            color: #fff;
+
+            font-size: 20px;
+            font-weight: 400;
+          }
+        }
+
+        .slider--number {
+          font-size: 240px;
+          font-weight: 500;
+          color: #ebff00;
+          line-height: 190px;
+          position: absolute;
+
+          z-index: -1;
+          top: 70px;
+
+          background-image: linear-gradient(
+            180deg,
+            darken(#ebff00, 20%),
+            lighten(rgb(0, 0, 0), 0%)
+          );
+          color: transparent;
+          background-clip: text;
+          display: inline-block;
+
+          @media screen and (max-width: 768px) {
+            left: -22px;
+          }
+        }
+
+        .image--holder {
+          margin-left: 100px;
+          min-height: 320px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          @media screen and (max-width: 768px) {
+            margin-left: 49px;
+            min-height: 320px;
+            width: auto;
+          }
+          @media screen and (max-width: 567px) {
+            min-height: 260px;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          padding-left: 24px;
+        }
+      }
+
+      @media screen and (max-width: 567px) {
+        padding-left: 50px;
+      }
+    }
+  }
+}

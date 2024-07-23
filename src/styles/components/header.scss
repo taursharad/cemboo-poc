@@ -1,0 +1,135 @@
+.header {
+  background-color: #010101 !important;
+  max-width: 1460px;
+  margin: 0 auto;
+
+  .header__toolbar {
+    display: flex;
+    align-items: center;
+    gap: 88.5px;
+    justify-content: space-between;
+    padding: 17px 0px;
+    max-width: 1184px;
+    width: 100%;
+    margin: 0 auto;
+
+    .header__navigation {
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: center;
+        padding-left: 0px;
+
+        li {
+          font-size: 16px;
+          font-weight: 600;
+          color: #959595;
+          line-height: 19.2px;
+
+          &:hover {
+            color: #ffff;
+            cursor: pointer;
+          }
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+      @media screen and (max-width: 1279px) {
+        display: none;
+      }
+    }
+
+    .header__left--side {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+
+      .avatar--holder {
+        border-radius: 50%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .header__logo {
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo--wrapper {
+        width: auto;
+        height: 65px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .hamburger--btn {
+        display: none;
+        background-color: white;
+
+        @media screen and (max-width: 768px) {
+          display: flex;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .header__mobile--wrapper {
+      display: none;
+    }
+    @media screen and (max-width: 767px) {
+      .header__mobile--wrapper {
+        display: flex;
+        width: 100%;
+        .header__mobile {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+
+          .header__user {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 24px;
+
+      width: 100%;
+    }
+
+    @media screen and (max-width: 1279px) {
+      padding: 8px 32px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    border-bottom: 1px solid #ebff00;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    .header__toolbar {
+      .header__left--side {
+        display: none;
+      }
+    }
+  }
+}

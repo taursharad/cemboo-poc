@@ -1,0 +1,13 @@
+.drawer__container {
+  .MuiDrawer-paper {
+    border-right: none;
+    margin-top: 88px;
+    background-color: red;
+  }
+
+  .drawer__list--wrapper {
+    .list--btn {
+      margin-bottom: 22px;
+    }
+  }
+}

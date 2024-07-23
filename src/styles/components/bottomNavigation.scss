@@ -1,0 +1,121 @@
+.wrapper-bottom-navigation-menu {
+  .navigation-menu-main {
+    display: none;
+    .__bottom-navigation-menu {
+      background-color: #191919;
+      .--icon-label {
+        color: #fff;
+        .--icon-home {
+          fill: #fff;
+        }
+        .--icon-category {
+          fill: #fff;
+        }
+        .--icon-profile {
+          fill: #fff;
+        }
+      }
+
+      .--highlighted-label {
+        color: #b7f84d;
+        .--icon-home {
+          fill: #b7f84d;
+        }
+        .--icon-category {
+          fill: #b7f84d;
+        }
+        .--icon-profile {
+          fill: #b7f84d;
+        }
+      }
+    }
+  }
+}
+.MuiDrawer-paper {
+  background-color: #191919;
+  margin-bottom: 50px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  .categories--list {
+    background-color: #191919;
+    .my-list {
+      color: #ffff;
+      padding: 12px 16px;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    .browse-list {
+      color: #ffff;
+      padding: 12px 16px;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    .trending-list {
+      color: #ffff;
+      padding: 12px 16px;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    .newly-list {
+      color: #ffff;
+      padding: 12px 16px;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+
+  .profile--list {
+    background-color: #191919;
+    .my-list {
+      color: #ffff;
+      padding: 12px 16px;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    .browse-list {
+      color: #ffff;
+      padding: 12px 16px;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    .trending-list {
+      color: #ffff;
+      padding: 12px 16px;
+      gap: 14px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+    .newly-list {
+      color: #ffff;
+      padding: 12px 16px;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+}
+@media screen and (max-width: 768px) {
+  .wrapper-bottom-navigation-menu {
+    .navigation-menu-main {
+      display: block;
+      z-index: 1201;
+    }
+  }
+}

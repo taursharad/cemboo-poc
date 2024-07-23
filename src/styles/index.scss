@@ -1,0 +1,28 @@
+// @import "./components/
+// components";
+@import "./abstract/index.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import "./components/header";
+@import "./components/sidebar";
+@import "./components/footer";
+@import "./components/continueWatching";
+@import "./components/heroSection";
+@import "./components/bottomNavigation";
+@import "./components/videoModal";
+@import "./components/topTrending";
+
+.main__wrapper {
+  background-color: white;
+
+  width: 100%;
+}
+
+
+.app__wrapper {
+  background-color: #010101;
+  width: 100%;
+  .wrapper--inside {
+    margin: 0 auto;
+  }
+}

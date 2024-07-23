@@ -1,0 +1,314 @@
+.hero__wrapper {
+  background-image: url("./images/header_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 750px;
+  .hero__main {
+    max-width: 1460px;
+    margin: 0 auto;
+    .hero__content {
+      padding-left: 138px;
+      padding-top: 48px;
+      max-width: 717px;
+      padding-bottom: 141px;
+
+      .content--title {
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 87px;
+        color: #ffff;
+        padding-bottom: 16px;
+        font-family: "Inter", sans-serif;
+      }
+      .content--subtitle {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 600;
+        color: #ffff;
+        font-family: "Inter", sans-serif;
+        padding-bottom: 16px;
+      }
+      .content--description {
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffff;
+        line-height: 20px;
+        font-family: "Inter", sans-serif;
+        padding-bottom: 16px;
+      }
+
+      .hero__rating {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 32px;
+
+        .hero__first {
+          height: 40px;
+          width: 1px;
+          background-color: #606060;
+        }
+        .hero__second {
+          height: 40px;
+          width: 1px;
+          background-color: #606060;
+        }
+
+        .hero__episodes {
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 22px;
+          color: #ffff;
+        }
+
+        .rating--info {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+
+          .ratings {
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 22px;
+            color: #ffff;
+          }
+        }
+        .rating--info2 {
+          font-family: "Inter", sans-serif;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 22px;
+          color: #ffff;
+        }
+      }
+      .hero__play {
+        display: flex;
+        gap: 32px;
+
+        align-items: center;
+        .icon--btn {
+          border-radius: 50%;
+          border: 1px solid #b7f84d;
+          background-color: #b6f84d3f;
+          color: #b7f84d;
+        }
+
+        .trailer--btn {
+          border: 1px solid #b7f84d;
+          border-radius: 24px;
+          color: #b7f84d;
+          padding: 12px 48px;
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          gap: 10px;
+          @media screen and (max-width: 768px) {
+            display: none;
+          }
+        }
+
+        .trailer--btn--mobile {
+          display: none;
+          border: 1px solid #b7f84d;
+          border-radius: 24px;
+          color: #b7f84d;
+          padding: 12px 48px;
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+          gap: 10px;
+          @media screen and (max-width: 768px) {
+            display: flex;
+          }
+        }
+        .play--btn {
+          border: 1px solid #b7f84d;
+          border-radius: 24px;
+          background-color: #b7f84d;
+          color: #010101;
+          padding: 12px 48px;
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+
+      @media screen and (max-width: 1279px) {
+        padding: 82px 0 130px 44px;
+      }
+    }
+
+    .hero__content--mobile {
+      display: none;
+      position: relative;
+      top: 36px;
+      margin: 0 30px;
+      background-image: url("./images/mobile_back.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: block;
+        padding: 207px 26px 16px;
+
+        .genre {
+          ul {
+            display: flex;
+            color: #ffff;
+            padding-left: 0px;
+            gap: 36px;
+            li {
+              font-size: 14px;
+              line-height: 17px;
+              font-weight: 600;
+              font-family: "Inter", sans-serif;
+            }
+            li:first-child {
+              list-style: none;
+            }
+          }
+        }
+
+        .content--title {
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 29px;
+          font-family: "Inter", sans-serif;
+          color: #ffff;
+          padding-bottom: 16px;
+        }
+        .content--subtitle {
+          color: #ffff;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          font-family: "Inter", sans-serif;
+        }
+
+        .hero__rating {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 4px;
+          padding-bottom: 16px;
+          .hero__first {
+            height: 40px;
+            width: 1px;
+            background-color: #606060;
+          }
+          .hero__second {
+            height: 40px;
+            width: 1px;
+            background-color: #606060;
+          }
+
+          .hero__episodes {
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffff;
+          }
+
+          .rating--info {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+
+            .ratings {
+              font-family: "Inter", sans-serif;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 17px;
+              color: #ffff;
+            }
+          }
+          .rating--info2 {
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #ffff;
+          }
+        }
+        .hero__play {
+          display: flex;
+          gap: 8px;
+
+          align-items: center;
+          .icon--btn {
+            border-radius: 50%;
+            border: 1px solid #b7f84d;
+            background-color: #b6f84d3f;
+            color: #b7f84d;
+            padding: 6px;
+          }
+
+          .trailer--btn {
+            border: 1px solid #b7f84d;
+            border-radius: 24px;
+            color: #b7f84d;
+            padding: 12px 48px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            gap: 10px;
+            @media screen and (max-width: 768px) {
+              display: none;
+            }
+          }
+
+          .trailer--btn--mobile {
+            display: none;
+            border: 1px solid #b7f84d;
+            border-radius: 24px;
+            color: #b7f84d;
+            padding: 8px 16px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            gap: 10px;
+            @media screen and (max-width: 767px) {
+              display: flex;
+            }
+          }
+          .play--btn {
+            border: 1px solid #b7f84d;
+            border-radius: 24px;
+            background-color: #b7f84d;
+            color: #010101;
+            padding: 8px 16px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      min-height: 510px;
+    }
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .hero__wrapper {
+    .hero__main {
+    }
+  }
+}
