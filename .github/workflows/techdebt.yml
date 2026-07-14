@@ -1,12 +1,46 @@
+# Sample GitHub Actions workflow: run Tech Debt Radar as a PR quality gate.
+#
+# Assumes this tool's source lives in the repo being checked (the bootcamp/demo
+# setup). To use it in another repo, vendor the `src/` + package.json there or
+# publish the tool and `npx` it.
+#
+# Setup:
+#   1. Add repo secret ANTHROPIC_API_KEY (Settings > Secrets and variables > Actions).
+#      GITHUB_TOKEN is provided automatically by Actions.
+#   2. To BLOCK merges on failure: Settings > Branches > branch protection rule >
+#      "Require status checks to pass" > select "Tech Debt Gate".
+
 name: Tech Debt Gate
-on: pull_request
-permissions: { contents: read, pull-requests: read }
+
+on:
+  pull_request:
+
 jobs:
-  gate:
+  techdebt:
     runs-on: ubuntu-latest
     steps:
-      - uses: taursharad/techdebt-radar@main
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          pr: ${{ github.event.pull_request.number }}
-          fail-on: critical
-          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Run tech debt gate (PR mode)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >
+          npx tsx src/index.ts ${{ github.repository }}
+          --pr ${{ github.event.pull_request.number }}
+          --fail-on critical
+
+      # The report files are handy to keep as a build artifact for reviewers.
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: techdebt-report
+          path: out/
+          if-no-files-found: ignore
